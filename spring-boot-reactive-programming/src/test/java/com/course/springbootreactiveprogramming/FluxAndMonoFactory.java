@@ -108,6 +108,50 @@ public class FluxAndMonoFactory {
                 .verifyComplete();
     }
 
+    @Test
+    public void fluxUsingMap(){
+
+        List<String> abc = List.of("A", "B", "C", "D", "EE", "FF");
+        Flux<String> stringFlux = Flux.fromStream(abc.stream())
+                .map(String::toLowerCase)
+                .log();
+
+        StepVerifier.create(stringFlux)
+                .expectNextCount(6)
+                .verifyComplete();
+    }
+
+    @Test
+    public void fluxUsingMapFilter(){
+
+        List<String> abc = List.of("A", "B", "C", "D", "EE", "FF");
+        Flux<String> stringFlux = Flux.fromStream(abc.stream())
+                .filter(s -> s.length() == 1)
+                .map(s -> s.concat(" Flux"))
+                .map(String::toLowerCase)
+                .log();
+
+        StepVerifier.create(stringFlux)
+                .expectNextCount(4)
+                .verifyComplete();
+    }
+
+    @Test
+    public void fluxUsingBuffer(){
+
+        List<String> abc = List.of("A", "B", "C", "D", "EE", "FF");
+        Flux<List<String>> listFlux = Flux.fromStream(abc.stream())
+                .filter(s -> s.length() == 1)
+                .map(s -> s.concat(" Flux"))
+                .map(String::toLowerCase)
+                .buffer(3)
+                .log();
+
+        StepVerifier.create(listFlux)
+                .expectNextCount(2)
+                .verifyComplete();
+    }
+
 
 
 

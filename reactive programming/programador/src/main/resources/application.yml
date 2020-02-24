@@ -18,5 +18,5 @@ spring:
   profiles: prod
   data:
     mongodb:
-      uri: mongodb+srv://admin2:khrYRcghv4J2uoEt@cluster0-6nd2m.mongodb.net/test?retryWrites=true&w=majority
+      uri: mongodb+srv://admin2:khrYRcghv4J2uoEt@cluster0-6nd2m.mongodb.net/programador?retryWrites=true&w=majority
       database: programador

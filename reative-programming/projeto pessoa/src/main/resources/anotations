@@ -1,4 +1,0 @@
-CRIAR PASTA /data/db na raiz
-
-sudo chmod -R go+w /data/db
-sudo chown -R $USER /data/db

@@ -9,7 +9,7 @@ import java.util.List;
 
 @RequestMapping("/users")
 @RestController
-public class StudentController {
+public class StudentRestController {
 
     private List<Student> STUDENTS = List.of(
       new Student(1, "Alexandre Ximenes"),

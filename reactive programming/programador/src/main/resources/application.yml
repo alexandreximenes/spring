@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8085
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      database: programador
+      host: localhost
+      port: 27017
+      username:
+      password:
+---
+spring:
+  profiles: prod
+  data:
+    mongodb:
+      uri: mongodb+srv://admin2:khrYRcghv4J2uoEt@cluster0-6nd2m.mongodb.net/test?retryWrites=true&w=majority
+      database: programador
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            client-id: 228222289660-o662ac7jq3jgg396hu7bsvp297g3jg1t.apps.googleusercontent.com
+#            client-secret: laheemYCK8qE01lO4YKwFUP-
+#          github:
+#            client-id:
+#            client-secret:
+#          facebook:
+#            client-id: 2654100291380159
+#            client-secret: 45bb1229466e73681e5dc2e60be27e7e

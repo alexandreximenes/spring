@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      database: programadores
+      port: 27017
+      host: localhost
+---
+spring:
+  profiles: prod
+  data:
+    mongodb:
+      database: programadores
+      port: 27017
+      host: localhost
+
+

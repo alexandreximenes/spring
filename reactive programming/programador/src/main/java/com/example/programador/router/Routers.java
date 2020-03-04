@@ -20,7 +20,7 @@ public class Routers {
     private ProgramadorRepository repository;
 
     @Bean
-    public RouterFunction<ServerResponse> router(ProgramadorHandler handler){
+    public RouterFunction<ServerResponse> router(ProgramadorHandler handler) {
 
         return RouterFunctions.route(
                 GET("/").and(accept(MediaType.APPLICATION_JSON)), handler::all)

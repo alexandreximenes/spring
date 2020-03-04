@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: local
+---
+spring:
+  profiles: local
+  data:
+    mongodb:
+      database: local
+      port: 27017
+      host: localhost
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      database: local
+      port: 27017
+      host: mongodb://localhost/workshop_reactiveprogramming
+server:
+  port: 8080
+logging:
+  file:
+    path: logs/
+    name: workshop.log

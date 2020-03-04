@@ -18,28 +18,29 @@ public class ProgramadorController {
     @Autowired
     private ProgramadorRepository programadorRepository;
 
-//    @GetMapping
-    public Flux<Programador> lista(){
+    //    @GetMapping
+    public Flux<Programador> lista() {
         return programadorRepository.findAll();
     }
 
 
     @GetMapping(value = "/", produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
-    public Flux listaStream(){
+    public Flux listaStream() {
         return Flux.interval(Duration.ofSeconds(1)).take(100);
     }
 
     //    @GetMapping("/{id}")
-    public Mono<Programador> getId(@PathVariable String id){
+    public Mono<Programador> getId(@PathVariable String id) {
         return programadorRepository.findById(id);
     }
-//    @PostMapping
-    public Mono<Programador> save(@RequestBody Programador programador){
+
+    //    @PostMapping
+    public Mono<Programador> save(@RequestBody Programador programador) {
         return programadorRepository.save(programador);
     }
 
-//    @PutMapping("/{id}")
-    public Mono<Programador> update(@PathVariable String id, @RequestBody Programador programador){
+    //    @PutMapping("/{id}")
+    public Mono<Programador> update(@PathVariable String id, @RequestBody Programador programador) {
         return programadorRepository
                 .findById(id)
                 .flatMap(p -> {
@@ -49,8 +50,8 @@ public class ProgramadorController {
                 }).switchIfEmpty(Mono.empty());
     }
 
-//    @DeleteMapping("/{id}")
-    public Mono<Programador> delete(@PathVariable String id){
+    //    @DeleteMapping("/{id}")
+    public Mono<Programador> delete(@PathVariable String id) {
         return programadorRepository.findById(id).flatMap(p -> programadorRepository.save(p));
     }
 }

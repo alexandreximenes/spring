@@ -1,0 +1,2 @@
+ java -Dserver.port=$PORT -Dspring.profiles.active=mlab $JAVA_OPTS -jar
+target/0.0.1-SNAPSHOT.jar

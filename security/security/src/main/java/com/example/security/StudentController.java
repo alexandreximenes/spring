@@ -14,7 +14,7 @@ public class StudentController {
 
 
     @GetMapping
-    public String index(){
+    public String index() {
         return "index";
     }
 }

@@ -12,13 +12,13 @@ import java.util.List;
 public class StudentRestController {
 
     private List<Student> STUDENTS = List.of(
-      new Student(1, "Alexandre Ximenes"),
-      new Student(2, "Amanda Ximenes"),
-      new Student(3, "Arthur Ximenes")
+            new Student(1, "Alexandre Ximenes"),
+            new Student(2, "Amanda Ximenes"),
+            new Student(3, "Arthur Ximenes")
     );
 
     @GetMapping("/{id}")
-    public Student findById(@PathVariable Integer id){
+    public Student findById(@PathVariable Integer id) {
         return STUDENTS.stream()
                 .filter(student -> id.equals(student.getId()))
                 .findFirst()

@@ -16,6 +16,11 @@ public class Response<T>{
         return ResponseEntity.created(location).build();
     }
 
+
+    public ResponseEntity<Object> ok(Object object) {
+        return ResponseEntity.ok(object);
+    }
+
     public ResponseEntity<List<T>> ok(List<T> list) {
         return ResponseEntity.ok(list);
     }

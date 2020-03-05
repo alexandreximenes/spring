@@ -1,6 +1,6 @@
 package com.springboot.update;
 
-import lombok.RequiredArgsConstructor;
+import com.springboot.update.i18n.I18nMessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,7 @@ import static java.util.Arrays.asList;
 @Service
 public class UserService {
 
+    @Autowired private I18nMessageResponse i18nMessageResponse;
     //    private final UserRepository userRepository;
     private List<User> users = new ArrayList<>();
 
@@ -46,5 +47,14 @@ public class UserService {
 
     public User findById(Long id) {
         return this.users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
+    }
+
+    public String i18nGetGoodMorning(String name) {
+        String[] split = name.split("(\\s)");
+        return i18nMessageResponse.getGoodMorning(split);
+    }
+
+    public String i18nGetGoodNigth(String name) {
+        return i18nMessageResponse.getGoodNight(name);
     }
 }

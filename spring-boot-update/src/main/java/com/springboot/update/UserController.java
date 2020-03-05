@@ -36,7 +36,7 @@ public class UserController {
     @GetMapping("/i18n/good-morning")
     public ResponseEntity<Object> getI18nGoodMorning(
             @RequestParam(name = "name", required = false,
-                    defaultValue = "Rest Spring") String name) {
+                    defaultValue = "") String name) {
         return response.ok(userService.i18nGetGoodMorning(name));
     }
 

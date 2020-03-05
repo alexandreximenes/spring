@@ -13,7 +13,8 @@ import static java.util.Arrays.asList;
 @Service
 public class UserService {
 
-    @Autowired private I18nMessageResponse i18nMessageResponse;
+    @Autowired
+    private I18nMessageResponse i18nMessageResponse;
     //    private final UserRepository userRepository;
     private List<User> users = new ArrayList<>();
 
@@ -42,7 +43,7 @@ public class UserService {
     }
 
     private long getSizeListPlusOne() {
-        return this.users.size()+1L;
+        return this.users.size() + 1L;
     }
 
     public User findById(Long id) {

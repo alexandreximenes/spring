@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-@RequestMapping("/")
+@RequestMapping("/users")
 public class UserController {
 
     private final UserService userService;

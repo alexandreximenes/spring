@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://www.meusite.org/user">
+
+    <soapEnv:Header/>
+    <soapEnv:Body>
+        <us:getUserRequest>
+            <us:name>Alexandre</us:name>
+        </us:getUserRequest>
+    </soapEnv:Body>
+
+</soapEnv:Envelope>

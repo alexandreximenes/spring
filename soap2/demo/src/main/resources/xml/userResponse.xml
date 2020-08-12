@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<getUserResponse
+xmlns="http://www.example.org/getUserDetails" 
+xsi:schemaLocation="http://www.example.org/getUserDetails userDetails.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<user>
+		<id>1</id>
+		<name>Alexandre</name>
+		<email>xyz@gmail.com</email>
+		<salary>1000.00</salary>
+		
+	</user>
+</getUserResponse>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<getUserResponse xmlns="user.xsd"-->
+<!--xsi:schemaLocation="http://www.meusite.org/user user.xsd"-->
+<!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">-->
+<!--	<name>-->
+<!--		<id>1</id>-->
+<!--		<name>SOAP with spring</name>-->
+<!--		<email>email@gmail.com</email>-->
+<!--		<salary>3000</salary>-->
+<!--	</name>-->
+<!--</getUserResponse>-->

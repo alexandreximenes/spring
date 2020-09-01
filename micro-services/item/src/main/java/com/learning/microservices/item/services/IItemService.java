@@ -3,7 +3,6 @@ package com.learning.microservices.item.services;
 import com.learning.microservices.item.models.Item;
 
 import java.util.Collection;
-import java.util.Optional;
 
 public interface IItemService {
 

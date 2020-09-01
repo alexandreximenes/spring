@@ -12,7 +12,7 @@ public class Item implements Serializable{
 
 	public Item(Product product, Integer size) {
 		this.product = product;
-		this.size = size;
+		this.size 	= size;
 	}
 
 	public Double getTotal(){

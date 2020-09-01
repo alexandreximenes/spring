@@ -2,6 +2,7 @@ package com.learning.microservices.item.controller;
 
 
 import com.learning.microservices.item.models.Item;
+import com.learning.microservices.item.services.IItemService;
 import com.learning.microservices.item.services.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import java.util.List;
 public class ItemController {
 
     @Autowired
-    private ItemService itemService;
+    private IItemService itemService;
 
     @GetMapping
     public ResponseEntity<List<Item>> findAll(){

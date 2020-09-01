@@ -2,7 +2,9 @@ package com.learning.microservices.products.controllers;
 
 import java.util.Collection;
 
+import com.learning.microservices.products.services.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +18,8 @@ import com.learning.microservices.products.services.ProductService;
 public class ProductController {
 
 	@Autowired
-	private ProductService productService;
+	@Qualifier("serviceRestTemplate")
+	private IProductService productService;
 	
 	@GetMapping
 	public Collection<Product> findAll(){
